@@ -1,0 +1,122 @@
+.main__board {
+    padding: 0 2rem;
+
+    h1 {
+        margin-bottom: 1rem;
+    }
+}
+
+main {
+    // background-color: $color-black-variant;
+
+    input {
+        background: transparent;
+        padding: 0.5rem;
+        box-shadow: 0 0 0.8rem $box-shadow;
+        cursor: pointer;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin: 1rem 0;
+
+        .card {
+            background-color: $color-white;
+            border-radius: $card-b-radius;
+            padding: 0.8rem;
+            box-shadow: 0 0 0.8rem $box-shadow;
+            display: flex;
+            justify-content: space-between;
+            // align-items: center;
+            flex-direction: column;
+
+            .card__middle {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1rem;
+
+
+
+                // .middle__left {
+                //     background-color: red;
+
+                // }
+
+
+                .progress {
+                    width: 90px;
+                    height: 90px;
+                    position: relative;
+                    // background-color: red;
+                    padding: 1rem;
+
+                    svg {
+                        // position: relative;
+
+                        circle {
+                            width: 100%;
+                            height: 100%;
+                            fill: none;
+                            stroke-dasharray: 100;
+                            stroke-width: 8px;
+                            stroke-dashoffset: 100;
+                            stroke-linecap: round;
+                            // background-color: aqua;
+                            stroke: $color-border-variant;
+                        }
+
+
+                    }
+
+                    span {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        // transform: translate(5px, 5px);
+
+                    }
+
+                }
+
+                small {
+                    color: $color-light;
+                }
+
+            }
+        }
+
+    }
+
+    .order__table {
+        h2 {
+            margin: 2rem 0 1.5rem;
+        }
+
+        table {
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: space-between;
+            // align-items: center;
+
+            thead {
+                display: flex;
+                justify-content: space-between;
+                background-color: red;
+                gap: 5rem;
+            }
+
+            tbody {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+
+    }
+
+
+
+}

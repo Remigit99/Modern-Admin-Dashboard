@@ -1,0 +1,84 @@
+.dashboard__right {
+
+
+    .right__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .user {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+
+            .user__info {
+                display: flex;
+                flex-direction: column;
+
+                h5 {
+                    color: $color-light;
+                    display: flex;
+                    align-self: right;
+
+                }
+            }
+
+
+
+        }
+
+    }
+
+    .recent__updates {
+        h2 {
+            margin-top: 0.5rem;
+        }
+
+        .updates {
+
+            margin: 1.5rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1rem;
+            background-color: $color-white;
+            border-radius: $card-b-radius;
+
+            .update {
+                display: flex;
+                // justify-content: space-between;
+                align-items: center;
+                gap: 1rem;
+
+            }
+
+        }
+
+    }
+
+    .sales__analysis {
+
+        h2 {
+            margin-bottom: 1rem;
+        }
+
+        .sales {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+
+            .sale {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: $color-white;
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+            }
+        }
+    }
+
+
+}
