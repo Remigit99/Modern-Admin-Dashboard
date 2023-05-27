@@ -32,19 +32,38 @@ main {
             // align-items: center;
             flex-direction: column;
 
+            .material-icons-sharp {
+                width: 2.5rem;
+                height: 2.5rem;
+                background-color: rgb(155, 93, 155);
+                color: $color-white;
+                border-radius: 50%;
+                display: grid;
+                place-content: center;
+
+            }
+
+            &:nth-child(2) .material-icons-sharp {
+                background-color: coral;
+
+            }
+
+            &:nth-child(3) .material-icons-sharp {
+                background-color: rgb(181, 216, 27);
+
+            }
+
+
             .card__middle {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 gap: 1rem;
 
-
-
                 // .middle__left {
                 //     background-color: red;
 
                 // }
-
 
                 .progress {
                     width: 90px;
@@ -52,20 +71,24 @@ main {
                     position: relative;
                     // background-color: red;
                     padding: 1rem;
+                    border-radius: 50%;
 
                     svg {
+                        width: 6rem;
+                        height: 6rem;
                         // position: relative;
 
                         circle {
                             width: 100%;
                             height: 100%;
                             fill: none;
-                            stroke-dasharray: 100;
+                            stroke-dasharray: 115;
                             stroke-width: 8px;
-                            stroke-dashoffset: 100;
+                            stroke-dashoffset: 90;
                             stroke-linecap: round;
                             // background-color: aqua;
                             stroke: $color-border-variant;
+                            transform: translate(5px, 5px);
                         }
 
 
@@ -75,7 +98,7 @@ main {
                         position: absolute;
                         top: 50%;
                         left: 50%;
-                        // transform: translate(5px, 5px);
+
 
                     }
 
@@ -86,6 +109,18 @@ main {
                 }
 
             }
+
+
+        }
+
+        &:nth-child(2) .card__middle circle {
+            stroke-dasharray: 80;
+            stroke-dashoffset: 20;
+        }
+
+        &:nth-child(3) circle {
+            stroke-dasharray: 110;
+            stroke-dashoffset: 35;
         }
 
     }
