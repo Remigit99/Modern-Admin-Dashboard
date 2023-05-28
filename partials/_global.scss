@@ -24,6 +24,9 @@ $card-b-radius: 1rem;
 
 $transition: all 300ms ease;
 
+.dark__theme {
+    $color-white-variant: grey;
+}
 
 body {
     background-color: $color-white-variant;
@@ -62,11 +65,11 @@ img {
 }
 
 h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 h3 {
@@ -87,10 +90,18 @@ p {
 
 
 
+/*======== Media Query Tablet =======*/
+
+@media screen and (max-width: 64em) {
+    .dashboard {
+        grid-template-columns: 7rem auto 17rem;
+    }
+}
 
 
-// @media screen and (max-width: 64em) {
-//     .dashboard {
-//         grid-template-columns: 1fr;
-//     }
-// }
+/*======== Media Query Small Devices =======*/
+@media screen and (max-width: 34em) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+}

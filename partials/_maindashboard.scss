@@ -65,6 +65,8 @@ main {
 
                 // }
 
+
+
                 .progress {
                     width: 90px;
                     height: 90px;
@@ -108,20 +110,23 @@ main {
                     color: $color-light;
                 }
 
+                // &:nth-child(2) .card__middle circle {
+                //     stroke-dasharray: 80;
+                //     stroke-dashoffset: 20;
+                //     stroke: red;
+                // }
+
+                // &:nth-child(3) circle {
+                //     stroke-dasharray: 110;
+                //     stroke-dashoffset: 35;
+                // }
+
             }
 
 
         }
 
-        &:nth-child(2) .card__middle circle {
-            stroke-dasharray: 80;
-            stroke-dashoffset: 20;
-        }
 
-        &:nth-child(3) circle {
-            stroke-dasharray: 110;
-            stroke-dashoffset: 35;
-        }
 
     }
 
@@ -130,28 +135,94 @@ main {
             margin: 2rem 0 1.5rem;
         }
 
-        table {
-            // display: flex;
-            // flex-direction: column;
-            // justify-content: space-between;
-            // align-items: center;
+        .table {
 
-            thead {
-                display: flex;
-                justify-content: space-between;
-                background-color: red;
-                gap: 5rem;
+            table {
+                background: $color-white;
+                padding: 0.5rem;
+                border-radius: $card-b-radius;
+
+                text-align: center;
+                width: 100%;
+
+                thead {
+                    th {
+                        height: 2.2rem;
+                        border-bottom: 1px solid rgb(223, 223, 223);
+                    }
+                }
+
+                tbody {
+                    td {
+                        height: 2rem;
+                        border-bottom: 1px solid rgb(223, 223, 223);
+                    }
+
+                    tr:last-child td {
+                        border: 0;
+                    }
+                }
             }
 
-            tbody {
-                display: flex;
-                justify-content: space-between;
+
+
+            a {
+                margin-top: 1.5rem;
             }
+
         }
+
+
+
 
 
     }
 
 
 
+}
+
+
+
+@media screen and (max-width: 64em) {
+
+    .main__board {
+        padding: 4.5rem 0.5rem 1rem;
+
+
+        main {
+
+            .cards {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .order__table {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 5rem;
+            }
+        }
+    }
+}
+
+// /*========= Media Query For Small Devices ===========*/
+
+@media screen and (max-width: 34em) {
+    .main__board {
+
+        main {
+
+            .order__table {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 5rem;
+                display: none;
+            }
+
+        }
+    }
 }

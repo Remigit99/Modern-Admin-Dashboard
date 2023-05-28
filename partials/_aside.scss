@@ -1,10 +1,23 @@
 aside {
     height: 100vh;
     box-shadow: 0.2px 0.2px 5px rgba(0, 0, 0, 0.068);
+    background-color: $color-white;
+    transition: $transition;
 
     .aside__header {
-        height: 4rem;
-        text-align: center;
+        height: 3.5rem;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+        align-items: center;
+        cursor: pointer;
+
+        #close-btn {
+            width: 1rem;
+            height: 1rem;
+            background: #000;
+            display: none;
+        }
     }
 
     .aside__menu {
@@ -46,4 +59,67 @@ aside {
     }
 
 
+}
+
+// @keyframes ShowAside {
+//     0%{
+
+//     }
+//     100%{
+
+//     }
+// }
+
+
+
+
+/*======== Media Query Tablet =======*/
+
+@media screen and (max-width: 64em) {
+    .dashboard__left {
+
+        // .aside__header {}
+
+        .aside__menu {
+            a {
+
+                h4 {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+/*======== Media Query Small Devices =======*/
+
+@media screen and (max-width: 34em) {
+    .dashboard__left {
+
+        position: fixed;
+        z-index: 5;
+        top: 0;
+        left: -100%;
+        background-color: aliceblue;
+
+        .aside__header {
+
+            #close-btn {
+                display: inline-block;
+            }
+        }
+
+        .aside__menu {
+            a {
+
+                h4 {
+                    display: block;
+                }
+            }
+        }
+    }
 }
