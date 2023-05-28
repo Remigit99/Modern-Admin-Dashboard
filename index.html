@@ -16,7 +16,11 @@
         <aside class="dashboard__left">
             <div class="aside__header">
                 <h2>REMI</h2>
-                <span id="close-btn"></span>
+                <span id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </span>
             </div>
 
             <div class="aside__menu">
@@ -146,14 +150,16 @@
                                 <h2>$27,990</h2>
                             </div>
 
-                            <div class="progress">
+                            <div id="chart"></div>
+
+                            <!-- <div class="progress">
                                 <svg>
                                     <circle cx="38" cy="38" r="36"></circle>
                                 </svg>
                                 <span>
                                     <h4>72%</h4>
                                 </span>
-                            </div>
+                            </div> -->
                         </div>
 
                         <small>Last 24 hours</small>
@@ -189,10 +195,22 @@
 
         <div class="dashboard__right">
             <div class="right__header">
-                <button id="open-btn"></button>
+                <button id="open-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
                 <div class="theme">
-                    <button class="light-theme">L</button>
-                    <button class="dark-theme">D</button>
+                    <button class="light-theme">
+                        <span class="material-icons-sharp">
+                            light_mode
+                        </span>
+                    </button>
+                    <button class="dark-theme">
+                        <span class="material-icons-sharp">
+                            dark_mode
+                        </span>
+                    </button>
 
                 </div>
 
@@ -258,7 +276,9 @@
                 <div class="sales">
 
                     <article class="sale">
-                        <span>I</span>
+                        <span class="material-icons-sharp">
+                            shopping_cart
+                        </span>
                         <div class="type">
                             <h5>ONLINE ORDERS</h5>
                             <small>Last 24hours</small>
@@ -273,7 +293,9 @@
                     </article>
 
                     <article class="sale">
-                        <span>I</span>
+                        <span class="material-icons-sharp">
+                            shopping_bag
+                        </span>
                         <div class="type">
                             <h5>OFFLINE ORDERS</h5>
                             <small>Last 24hours</small>
@@ -288,7 +310,9 @@
                     </article>
 
                     <article class="sale">
-                        <span>I</span>
+                        <span class="material-icons-sharp">
+                            person_outline
+                        </span>
                         <div class="type">
                             <h5>NEW CUSTOMERS</h5>
                             <small>Last 24hours</small>
@@ -313,7 +337,7 @@
     </div>
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="./js/app.js"></script>
 </body>
 

@@ -34,15 +34,65 @@ closeBtn.addEventListener("click", () => {
 
 
 //Theme Mode Toggler
-// const lightTheme = document.querySelector();
-// const darkTheme = document.querySelector();
+const lightTheme = document.querySelector(".light-theme");
+const darkTheme = document.querySelector(".dark-theme");
 const themeToggler = document.querySelector(".theme");
 const body = document.querySelector("body")
 
 
 themeToggler.addEventListener("click", () => {
-    body.classList.toggle("dark__theme")
+    body.classList.toggle("dark__theme");
 })
+
+darkTheme.addEventListener("click", () => {
+    body.classList.toggle("dark__theme");
+})
+
+
+
+//Radial Circular Chart
+var options = {
+    chart: {
+        height: 150,
+        type: "radialBar"
+    },
+
+    series: [76],
+
+    plotOptions: {
+        radialBar: {
+            hollow: {
+                margin: 15,
+                size: "70%"
+            },
+
+            dataLabels: {
+                showOn: "always",
+                name: {
+                    offsetY: -10,
+                    show: false,
+                    color: "#888",
+                    fontSize: "13px"
+                },
+                value: {
+                    color: "#111",
+                    fontSize: "16px",
+                    show: true
+                }
+            }
+        }
+    },
+
+    stroke: {
+        lineCap: "round",
+    },
+    // labels: ["Progress"]
+};
+
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+
+chart.render();
+
 
 //Table Data
 
